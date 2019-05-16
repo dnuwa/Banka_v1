@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const logger = require('./middleware/logger');
 const app = express();
 
 
@@ -11,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 // Members API routes
-app.use('/api/members', require('./routes/api/members'))
+app.use('/api/members', require('./routes/api/users'))
 
 
 const PORT = process.env.PORT || 5000;
