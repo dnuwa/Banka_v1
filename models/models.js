@@ -1,15 +1,12 @@
 const users = [
-  {
-    id: 1,
-    name: "John Doe",
-    email: "jhon@gmail.com",
-    status: "active"
-  },
-  {
-    id: 2,
-    name: "daniel",
-    email: "danny@gmail.com",
-    status: "active"
+  { 
+    id:1,
+    email:"dnuwa@gmail.com",
+    first_name:"daniel",
+    last_name:"nuwagaba",
+    password:"somestring1",
+    type:"client",
+    isAdmin:"true"
   }
 ];
 
