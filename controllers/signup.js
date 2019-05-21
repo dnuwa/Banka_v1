@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 // import token generator
-// const middleware = require('../../middleware');
+const middleware = require('../middleware');
 
 // import user data storage
 const users = require('../models');
@@ -140,7 +140,7 @@ exports.signup = (req, res) => {
     return res.status(200).json({
         status: 200,
         data: {
-            // token: middleware.token(data.id),
+            token: middleware.token(data.id),
             id: data.id,
             firstName: data.firstName,
             lastName: data.lastName,
