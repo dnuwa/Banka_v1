@@ -1,17 +1,21 @@
 const express = require('express');
-const path = require('path');
+const bodyParser = require('body-parser');
+const routes = require('./routes/api');
+
 const app = express();
 
+// Configure bodyparser to handle post requests
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    }),
+);
+routes.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/json' }));
+app.use(bodyParser.text());
 
-// app.use(logger);
-
-// Body parser middleware
-app.use(express.json());
-app.use(express.urlencoded({extended:false}));
-
-// Members API routes
-app.use('/api/members', require('./routes/api/users'))
-
+// use API routes in the app
+app.use('/api/v1', routes);
 
 const PORT = process.env.PORT || 5000;
 
