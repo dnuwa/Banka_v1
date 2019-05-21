@@ -1,10 +1,9 @@
 /* eslint-disable consistent-return */
 const bcrypt = require('bcryptjs');
 // import token generator
-// const middleware = require('../../middleware');
+const middleware = require('../middleware');
 // import user data storage
 const users = require('../models');
-console.log(users);
 // user login
 exports.login = (req, res) => {
 	const { password, email } = req.body;
@@ -32,7 +31,7 @@ exports.login = (req, res) => {
 	return res.status(200).json({
 		status: 200,
 		data: {
-			// token: middleware.token(userObject.id),
+			token: middleware.token(userObject.id),
 			id: userObject.id,
 			firstName: userObject.firstName,
 			lastName: userObject.lastName,
