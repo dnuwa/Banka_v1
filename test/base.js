@@ -88,3 +88,13 @@ exports.login_user = {
 	email: "daniel.nuwa@gmail.com",
 	password: "somestring1"
 }
+
+// Banking *****************************************
+exports.bank_account_1 = {
+	type: 'current',
+};
+
+// invalid type
+exports.bank_account_2 = {
+	type: 'invalid',
+};
