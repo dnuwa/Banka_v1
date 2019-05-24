@@ -52,6 +52,15 @@ exports.signup_user_6 = {
 	isAdmin: "true"
 }
 
+exports.signup_user_7 = {
+	email: 'staff@g.com',
+	firstName: 'Patrick',
+	lastName: 'KImanje',
+	password: 'sometext1',
+	type: 'staff',
+	isAdmin: false,
+};
+
 exports.signup_user_8 = {
 	email: "dnuwa@gmail.com",
 	firstName: "!@#$%^&*",
@@ -87,6 +96,11 @@ exports.login_user_2 = {
 exports.login_user = {
 	email: "daniel.nuwa@gmail.com",
 	password: "somestring1"
+}
+
+exports.login_user_7 = {
+	email: 'staff@g.com',
+	password: 'sometext1'
 }
 
 // Banking *****************************************

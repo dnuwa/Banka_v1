@@ -4,6 +4,7 @@ const chaiHttp = require('chai-http');
 require('../index');
 // import out user collection(database)
 const database = require('../models');
+
 const base = require('./base');
 
 // Base URL
@@ -17,7 +18,7 @@ chai.should();
 
 describe.only('Login Authentication ', () => {
     beforeEach(() => {
-        database.length = 0; // empty user collection
+        database.users.length = 0; // empty user collection
     });
     describe('POST', () => {
         // Signup and login

@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const middleware = require('../middleware');
 
 // import user data storage
-const users = require('../models');
+const { users } = require('../models');
 
 const checkName = (name, res) => {
     // Regular expression for name with spaces allowed in

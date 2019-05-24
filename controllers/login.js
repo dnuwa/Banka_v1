@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 // import token generator
 const middleware = require('../middleware');
 // import user data storage
-const users = require('../models');
+const { users } = require('../models');
 // user login
 exports.login = (req, res) => {
 	const { password, email } = req.body;

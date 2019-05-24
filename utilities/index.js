@@ -1,5 +1,5 @@
 // Import User account database
-const users = require('../models');
+const { users } = require('../models');
 
 // Current user data
 exports.currentUser = (id) => {
@@ -34,6 +34,7 @@ exports.checkUserType = (userData, res) => {
 exports.isNotClient = (userData, res) => {
     if (userData) {
         if (userData.type === 'client') {
+            console.log(`user data ------- ${userData.type}`);
             return res.status(401).json({
                 status: 401,
                 error: 'Access denied!',
