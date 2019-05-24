@@ -1,5 +1,5 @@
 // Import Bank account database
-const bankAccount = require('../models');
+const { bankAccount } = require('../models');
 // Current user information
 const utils = require('../utilities');
 

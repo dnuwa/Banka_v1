@@ -13,7 +13,7 @@ chai.should();
 
 describe.only('user signup', () => {
   beforeEach(() => {
-    models.length = 0;
+    models.users.length = 0;
   });
 
   describe('POST', () => {
